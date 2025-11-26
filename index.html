@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Full Page Clean Background */
+  body {
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+  }
+
+
+  /* Center Card
+     .form-container {
+        background: #ffffff;
+        width: 100%;
+        max-width: 480px;
+        padding: 36px;
+        border-radius: 18px;
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+        border: 1px solid #e5e7eb;
+    }
+
+    Title styling 
+     .form-container h2 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #1f2937;
+        text-align: center;
+        margin-bottom: 28px;
+        letter-spacing: -0.5px;
+    } 
+
+     Label
+     #dynamicForm label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 6px;
+        display: block;
+    } 
+
+    /* Input fields */
+  #dynamicForm input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    background: #fafafa;
+    font-size: 15px;
+    margin-bottom: 18px;
+    transition: 0.25s;
+  }
+
+  /* Focus effect */
+  #dynamicForm input:focus {
+    border-color: #4a6cff;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 108, 255, 0.16);
+  }
+
+  /* Submit Button */
+  #dynamicForm button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #4a6cff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 4px;
+  }
+
+  #dynamicForm button:hover {
+    background: #3a54d4;
+  }
+
+  /* Status message */
+  #status {
+    text-align: center;
+    margin-top: 15px;
+    color: #4b5563;
+    font-size: 14px;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 480px) {
+    .form-container {
+      padding: 26px;
+    }
+
+    body {
+      padding: 20px;
+    }
+  }
+</style>
+
+<body>
+
+  <main class="content">
+    <h1>Contact Us (firebase)</h1>
+
+    <form id="dynamicForm">
+      <label>Name:</label><br>
+      <input type="text" name="name"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email"><br><br>
+
+      <label>Message:</label><br>
+      <input type="text" name="message"><br><br>
+
+
+      <label>Country:</label><br>
+      <input type="text" name="country"><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
